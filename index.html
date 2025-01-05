@@ -4,170 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPA Detailing</title>
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        
-        .header { 
-            position: relative; 
-            background-image: url('images/detail5.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            color: #fff; 
-            padding: 20% 0; 
-            text-align: center; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        } 
-        
-        .header::before { 
-            content: ''; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: rgba(0, 0, 0, 0.5); 
-            z-index: 1; 
-        } 
-        
-        .header h1 { font-size: 4em; margin: 0; }
-
-        .header h1, .header p 
-        { 
-            position: relative; 
-            z-index: 2; 
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service {
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .service:hover {
-            transform: translateY(-5px);
-        }
-        .service h2 {
-            margin-top: 0;
-            color: #007BFF;
-            font-size: 2em;
-        }
-        .service ul {
-            padding-left: 20px;
-        }
-        .service ul li {
-            margin-bottom: 10px;
-        }
-        .service img {
-            width: 100%;
-            height: 200px; /* Ajusta la altura según tus necesidades */
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .contact {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .contact a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="header">
-        <h1>IPA Detailing</h1>
-        <p>Excellence for your car</p>
+    <div id="language-selection" class="language-selection">
+        <p>Seleccione su idioma / Select your language</p>
+        <img src="images/mexico-flag.png" alt="Español" onclick="setLanguage('es')">
+        <img src="images/usa-flag.png" alt="English" onclick="setLanguage('en')">
     </div>
-    <div class="container">
-        <div>
-            <h3>IPA Detailing is dedicated to providing top-quality car washing and detailing services that highlight the true beauty of each vehicle. With a passion for perfection and an eye for detail, we strive to deliver exceptional results that exceed our customers' expectations.</h3>
+    <div id="content" class="hidden">
+        <div class="header">
+            <h1>IPA Detailing</h1>
+            <p id="headTitle">Excellence for your car</p>
         </div>
-        <div class="service">
-            <img src="images/detail1.jpg" alt="Premium Wash">
-            <h2>Premium Wash - $50/60*</h2>
-            <ul>
-                <li>Completed Hand Wash</li>
-                <li>Clean Wheels & Tires</li>
-                <li>Foam Wash</li>
-                <li>Clean outside windows</li>
-                <li>Tires dressing</li>
-                <li>Door Jambs</li>
-                <li>Towel dry and Air blower</li>
-                <li>Premium Spray Wax sealed for up to 30 days of protection</li>
-                <li>Dress all exterior trims & plastic</li>
-            </ul>
-            <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$20</p>
+        <div class="container">
+            <div>
+                <h3 id="headTitle2">IPA Detailing is dedicated to providing top-quality car washing and detailing services that highlight the true beauty of each vehicle. With a passion for perfection and an eye for detail, we strive to deliver exceptional results that exceed our customers' expectations.</h3>
+            </div>
+            <div class="service">
+                <img src="images/detail1.jpg" alt="Premium Wash">
+                <h2 id="headTitle3">Premium Wash - $50/60*</h2>
+                <ul id="combo1Text">
+                    <li>Completed Hand Wash</li>
+                    <li>Clean Wheels & Tires</li>
+                    <li>Foam Wash</li>
+                    <li>Clean outside windows</li>
+                    <li>Tires dressing</li>
+                    <li>Door Jambs</li>
+                    <li>Towel dry and Air blower</li>
+                    <li>Premium Spray Wax sealed for up to 30 days of protection</li>
+                    <li>Dress all exterior trims & plastic</li>
+                </ul>
+                <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$20</p>
+            </div>
+            <div class="service">
+                <img src="images/detail2.jpg" alt="Wash & Wax">
+                <h2 id="headTitle4">Wash & Wax - $120/140*</h2>
+                <ul id="combo2Text">
+                    <li>Completed Hand Wash</li>
+                    <li>Clean Wheels & Tires</li>
+                    <li>Foam Wash</li>
+                    <li>Iron Decontamination</li>
+                    <li>Clay Bar Exfoliation</li>
+                    <li>Clean outside windows</li>
+                    <li>Tires dressing</li>
+                    <li>Door Jambs</li>
+                    <li>Ceramic Spray Wax</li>
+                    <li>All exterior trims and Molding dressed</li>
+                </ul>
+                <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$25</p>
+            </div>
+            <div class="service">
+                <img src="images/detail3.jpg" alt="Full Interior Detail">
+                <h2 id="headTitle5">Full Interior Detail - $200/$280*</h2>
+                <ul id="combo3Text">
+                    <li>Thorough vacuum of the entire interior</li>
+                    <li>Deep clean door panels, trims, plastics, dashboard, center console, etc...</li>
+                    <li>Shampoo Seats, Carpet, and Floor Mats</li>
+                    <li>Hot Water Extraction</li>
+                    <li>Deep clean leather seats and surface</li>
+                    <li>Apply Leather Conditioning</li>
+                    <li>Apply UV protection on interior trims and plastics</li>
+                    <li>Streak-Free interior glass and windows</li>
+                </ul>
+                <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$40</p>
+            </div>
+            <div class="service">
+                <img src="images/detail4.jpg" alt="Mini-Interior Detail">
+                <h2 id="headTitle6">Mini-Interior Detail - $40/60*</h2>
+                <ul id="combo4Text">
+                    <li>Thorough vacuum of the entire interior</li>
+                    <li>Wipe down light dust and debris on surfaces</li>
+                    <li>Apply UV protection on interior trims and plastics</li>
+                    <li>Streak-Free interior glass and windows</li>
+                </ul>
+                <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$20</p>
+            </div>
         </div>
-        <div class="service">
-            <img src="images/detail2.jpg" alt="Wash & Wax">
-            <h2>Wash & Wax - $120/140*</h2>
-            <ul>
-                <li>Completed Hand Wash</li>
-                <li>Clean Wheels & Tires</li>
-                <li>Foam Wash</li>
-                <li>Iron Decontamination</li>
-                <li>Clay Bar Exfoliation</li>
-                <li>Clean outside windows</li>
-                <li>Tires dressing</li>
-                <li>Door Jambs</li>
-                <li>Ceramic Spray Wax</li>
-                <li>All exterior trims and Molding dressed</li>
-            </ul>
-            <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$25</p>
+        <div class="contact">
+            <h2 id="titleContact">Get In Touch</h2>
+            <p id="ownerContact">Israel Amador, Owner</p>
+            <p>Email: ipena_detailing@outlook.com</p>
+            <p>Phone: (936) 703-8147</p>
+            <p id="socialContact">Follow us on instagram: <a href="https://www.instagram.com/ipa_detailing18/">ipa_detailing</a></p>
         </div>
-        <div class="service">
-            <img src="images/detail3.jpg" alt="Full Interior Detail">
-            <h2>Full Interior Detail - $200/$280*</h2>
-            <ul>
-                <li>Thorough vacuum of the entire interior</li>
-                <li>Deep clean door panels, trims, plastics, dashboard, center console, etc...</li>
-                <li>Shampoo Seats, Carpet, and Floor Mats</li>
-                <li>Hot Water Extraction</li>
-                <li>Deep clean leather seats and surface</li>
-                <li>Apply Leather Conditioning</li>
-                <li>Apply UV protection on interior trims and plastics</li>
-                <li>Streak-Free interior glass and windows</li>
-            </ul>
-            <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$40</p>
-        </div>
-        <div class="service">
-            <img src="images/detail4.jpg" alt="Mini-Interior Detail">
-            <h2>Mini-Interior Detail - $40/60*</h2>
-            <ul>
-                <li>Thorough vacuum of the entire interior</li>
-                <li>Wipe down light dust and debris on surfaces</li>
-                <li>Apply UV protection on interior trims and plastics</li>
-                <li>Streak-Free interior glass and windows</li>
-            </ul>
-            <p>*Prices are for big vehicles such as mini SUVs, and small trucks. VANS, BIG TRUCKS, 3 ROWS +$20</p>
-        </div>
-        
-    </div>
-    <div class="contact">
-        <h2>Get In Touch</h2>
-        <p>Israel Amador, Owner</p>
-        <p>Email: ipena_detailing@outlook.com</p>
-        <p>Phone: (936) 703-8147</p>
-        <p>Follow us on instagram: <a href="https://www.instagram.com/ipa_detailing18/">ipa_detailing</a></p>
     </div>
 </body>
 </html>

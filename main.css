@@ -13,9 +13,19 @@ body {
     background-position: center; 
     color: #fff; 
     padding: 20% 0; 
-    text-align: center; 
+    text-align: left; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 } 
+
+.header-logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; /* ajusta el tamaño del logo como prefieras */
+    margin-right: 10px;
+}
 
 .header::before { 
     content: ''; 
@@ -29,6 +39,12 @@ body {
 } 
 
 .header h1 { font-size: 4em; margin: 0; }
+
+#headTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 .header h1, .header p 
 { 

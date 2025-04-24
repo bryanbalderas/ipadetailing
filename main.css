@@ -12,9 +12,13 @@ body {
     background-size: cover;
     background-position: center;
     color: #fff;
-    padding: 40px 40px 20px 40px; /* menos padding para que el header no sea tan alto */
+    padding: 40px;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Esto hace que el header ocupe toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea los elementos en la parte superior */
 }
 
 .header-logo-title {
@@ -48,14 +52,18 @@ body {
 }
 
 #headTitle {
-    font-size: 1.8em; /* más grande */
+    font-size: 3em;
     font-weight: bold;
     text-align: center;
     position: relative;
     z-index: 2;
     max-width: 800px;
-    margin: 0 auto;
-    padding-top: 10px;
+    margin: auto; /* Esto centra vertical y horizontalmente el texto */
+    padding: 20px;
+    flex-grow: 1; /* Permite que este elemento ocupe el espacio disponible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header::before {

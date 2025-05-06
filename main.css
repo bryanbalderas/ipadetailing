@@ -226,9 +226,9 @@ path {
     
     .whatsapp-tooltip {
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-10%);
         bottom: calc(100% + 10px);
-        min-width: 200px;
+        min-width: 100px;
         white-space: normal;
         font-size: 12px;
         padding: 8px 15px;

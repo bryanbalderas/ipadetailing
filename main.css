@@ -157,3 +157,95 @@ body {
 .hidden {
     display: none;
 }
+
+
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: forestgreen;
+    z-index: 99;
+    margin-bottom: 60px;
+}
+
+svg {
+    width: 80px;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+}
+
+circle {
+    fill: #25d366;
+}
+
+path {
+    fill: #fff;
+}
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    /* Quitamos el flex para mantener posición original */
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: -300px; /* Mueve el globo a la izquierda */
+    background: #fff;
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    min-width: 250px;
+    text-align: center;
+    display: block !important;
+    white-space: nowrap;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 310px; /* Posición de la flecha ajustada a nueva posición */
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Mantenemos el SVG en su posición original */
+#whatsapp a {
+    position: relative;
+    display: block;
+}
+
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+    
+    .whatsapp-tooltip {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: calc(100% + 10px);
+        min-width: 200px;
+        white-space: normal;
+        font-size: 12px;
+        padding: 8px 15px;
+        left: -140px; /* Ajuste fino para posición */
+    }
+    
+    .whatsapp-tooltip::after {
+        left: 140px; /* Posición relativa al nuevo ancho */
+        top: 100%;
+        border-width: 8px;
+    }
+    
+    
+    /* Asegurar que el tooltip no salga de la pantalla */
+    .whatsapp-tooltip {
+        margin-left: 20px;
+        margin-right: 20px;
+        max-width: calc(100vw - 40px);
+    }
+}
